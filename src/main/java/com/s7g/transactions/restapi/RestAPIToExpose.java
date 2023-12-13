@@ -10,6 +10,8 @@ public class RestAPIToExpose {
 
     @GetMapping("/data")
     public String getData() {
+
+        System.out.println("This is new deployed version");
         return "data";
     }
 }
