@@ -12,6 +12,6 @@ public class RestAPIToExpose {
     public String getData() {
 
         System.out.println("This is new deployed version");
-        return "data";
+        return "deployednewdata";
     }
 }
