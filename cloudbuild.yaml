@@ -6,7 +6,7 @@ steps:
     # Deploy container image to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
-    args: [ 'run', 'deploy', 'SERVICE-NAME', '--image', 'gcr.io/$PROJECT_ID/transactions', '--region', 'REGION' ]
+    args: [ 'run', 'deploy', 'transactions', '--image', 'gcr.io/$PROJECT_ID/transactions', '--region', 'us-central1' ]
 images: ['gcr.io/$PROJECT_ID/transactions']
 options:
   logging: CLOUD_LOGGING_ONLY
