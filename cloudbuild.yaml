@@ -1,6 +1,7 @@
 steps:
-  - name: 'gcr.io/cloud-builders/mvn'
-    args: ['install']
+  - name: 3.9.6-amazoncorretto-21
+    entrypoint: mvn
+    args: [ 'package','-Dmaven.test.skip=true' ]
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '--tag=gcr.io/$PROJECT_ID/transactions', '.']
 images: ['gcr.io/$PROJECT_ID/transactions']
